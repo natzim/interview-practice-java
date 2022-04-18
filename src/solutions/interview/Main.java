@@ -170,7 +170,7 @@ public class Main {
         System.out.println("Fib: " + Fibonacci.fibWithBottomUp(6));
 
         // 17. String calculation.
-        System.out.println("String calculation: " + StringCalculation.calculateString("5*2+2+3+5*2"));
+        System.out.println("String calculation: " + StringCalculation.calculateString("5+5*5^2+1-1^5"));
     }
 
     public static Integer getRandom() {
