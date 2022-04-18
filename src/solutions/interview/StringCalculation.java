@@ -11,8 +11,6 @@ public class StringCalculation {
         Stack<String> calculations = new Stack<>();
 
         for (int index = 0; index < calculation.length(); index++) {
-            // 5+5*5^2+1
-
             if (calculation.charAt(index) == '+' || calculation.charAt(index) == '-' || calculation.charAt(index) == '*' || calculation.charAt(index) == '/' || calculation.charAt(index) == '^') {
                 // Push found number onto stack.
                 calculations.push(calculation.substring(index - numberCounter, index));
