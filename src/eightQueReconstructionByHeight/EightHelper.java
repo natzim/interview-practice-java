@@ -210,4 +210,87 @@ public class EightHelper {
             return midIndex + indexOffset;
         }
     }
+
+    public String caesarCipher(String s, int k) {
+        // Write your code here
+        char[] characters = s.toCharArray();
+
+        for(int charIndex = 0; charIndex < characters.length; charIndex++) {
+            char newChar = moveChar(characters[charIndex], k, 65, 90);
+            newChar = moveChar(newChar, k, 97, 122);
+            characters[charIndex] = newChar;
+        }
+
+        return String.valueOf(characters);
+    }
+
+    private char moveChar(int charCode, int adjustment, int min, int max) {
+        if (charCode >= min && charCode <= max) {
+            int newChar = charCode + adjustment;
+            if (newChar > max) {
+                newChar -= 26;
+            }
+            return (char) newChar;
+        }
+        return (char) charCode;
+    }
+
+    public String gridChallenge(List<String> grid) {
+        // Write your code here
+        for(int i = 0; i < grid.size(); i++) {
+            grid.set(i, orderCharacters(grid.get(i)));
+        }
+
+        for(int i = 0; i < grid.size(); i++) {
+            char[] column = new char[grid.size()];
+            for(int j = 0; j < grid.get(i).length(); j++) {
+                column[j] = grid.get(j).toCharArray()[i];
+            }
+            if (!areCharactersInOrder(column)) {
+                return "NO";
+            }
+        }
+
+        return "YES";
+    }
+
+    private String orderCharacters(String string) {
+        char[] characterCodes = string.toCharArray();
+        Arrays.sort(characterCodes);
+
+        return String.valueOf(characterCodes);
+    }
+
+    private boolean areCharactersInOrder(char[] characters) {
+        int prevValue = 0;
+        for(int charCode: characters) {
+            if (charCode < prevValue) {
+                return false;
+            } else {
+                prevValue = charCode;
+            }
+        }
+        return true;
+    }
+
+    public int superDigit(String n, int k) {
+        // Write your code here
+        while (n.length() > 1 || k > 0) {
+            char[] characters = n.toCharArray();
+            int total = 0;
+
+            for(char character: characters) {
+                total += Character.getNumericValue(character);
+            }
+
+            if (k != 0) {
+                total *= k;
+                k = 0;
+            }
+
+            n = String.valueOf(total);
+        }
+
+        return Integer.parseInt(n);
+    }
 }
