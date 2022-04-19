@@ -50,6 +50,25 @@ public class StringCalculation {
         }
     }
 
+    public static int calculateString(String[] calculation) {
+        Stack<Integer> numbers = new Stack<>();
+
+        for (String value : calculation) {
+            try {
+                Integer number = Integer.parseInt(value);
+                numbers.push(number);
+            } catch (Exception ex) {
+                if (numbers.size() > 1) {
+                    numbers.push(performMathOperation(numbers.pop(), value, numbers.pop()));
+                } else {
+                    return 0;
+                }
+            }
+        }
+
+        return numbers.pop();
+    }
+
     private static int performMathOperation(int num2, String operation, int num1) {
         return switch (operation) {
             case "+" -> num1 + num2;

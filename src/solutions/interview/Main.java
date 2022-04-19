@@ -171,6 +171,9 @@ public class Main {
 
         // 17. String calculation.
         System.out.println("String calculation: " + StringCalculation.calculateString("5+5*5^2+1-1^5"));
+
+        // 18. String calculation.
+        System.out.println("String calculation:" + StringCalculation.calculateString(new String[] {"3", "5", "*", "2", "+", "5", "/"}));
     }
 
     public static Integer getRandom() {
