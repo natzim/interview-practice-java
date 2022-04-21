@@ -4,6 +4,8 @@ import solutions.interview.Models.Node;
 import solutions.interview.Models.TreeNode;
 import solutions.interview.Models.TreeNodeWithArray;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -177,6 +179,13 @@ public class Main {
 
         // 19. Minimum and maximum sum.
         MinMaxSum.minMaxSum(Arrays.asList( 2, 1, 5, 4, 3));
+
+        // 20. Date time formatter.
+        DateTimeFormatter timeInputFormat = DateTimeFormatter.ofPattern("hh:mm:ssa");
+        DateTimeFormatter timeOutputFormat = DateTimeFormatter.ofPattern("HH:mm:ss");
+
+        LocalTime time = LocalTime.parse("07:05:45PM", timeInputFormat);
+        System.out.println(time.format(timeOutputFormat));
     }
 
     public static Integer getRandom() {
