@@ -69,12 +69,19 @@ public class StringCalculation {
         return numbers.pop();
     }
 
+    /**
+     * Perform a specific mathematical calculation.
+     * @param num2 First number as an integer.
+     * @param operation Operation character, could be +, -, *, /\, ^.
+     * @param num1 Second number as an integer.
+     * @return Returns the result as an integer based on what calculation was performed on the two input numbers.
+     */
     private static int performMathOperation(int num2, String operation, int num1) {
         return switch (operation) {
             case "+" -> num1 + num2;
             case "-" -> num1 - num2;
             case "*" -> num1 * num2;
-            case "/" -> num1 / num2;
+            case "/", "\\" -> num1 / num2;
             case "^" -> (int) Math.pow(num1, num2);
             default -> 0;
         };

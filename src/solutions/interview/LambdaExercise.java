@@ -4,6 +4,7 @@ import solutions.interview.Models.Person;
 
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class LambdaExercise {
     public static void LambdaFunctions() {
@@ -17,7 +18,7 @@ public class LambdaExercise {
 
         // Sort the list by last name.
         people.sort((p1, p2) -> p1.getLastName().compareTo(p2.getLastName()));
-        List<Person> sortedPeople = people.stream().sorted(Comparator.comparing(Person::getFirstName)).toList();
+        List<Person> sortedPeople = people.stream().sorted(Comparator.comparing(Person::getFirstName)).collect(Collectors.toList());
 
         // Create a function that prints all elements in the list.
         System.out.println("Printing all people:");

@@ -23,7 +23,7 @@ public class Main {
         // 1. How many buckets needed for the amount of coins.
         int[] coins = {14, 10, 5, 7, 24};
 
-        for (int coin:coins) {
+        for (int coin : coins) {
             System.out.printf("%d: %d buckets needed%n", coin, Buckets.bucketCounter(coin));
         }
 
@@ -186,6 +186,9 @@ public class Main {
 
         LocalTime time = LocalTime.parse("07:05:45PM", timeInputFormat);
         System.out.println(time.format(timeOutputFormat));
+
+        // 21. Minimum VMs required.
+        System.out.println("Minimum VM's required: " + MinimumVMs.getMinimumRequiredVMs(Arrays.asList(new int[] {2, 5}, new int[] {3, 6}, new int[] {5, 7})));
     }
 
     public static Integer getRandom() {
