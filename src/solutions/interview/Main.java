@@ -1,6 +1,7 @@
 package solutions.interview;
 
 import solutions.interview.Models.Node;
+import solutions.interview.Models.Person;
 import solutions.interview.Models.TreeNode;
 import solutions.interview.Models.TreeNodeWithArray;
 
@@ -189,6 +190,11 @@ public class Main {
 
         // 21. Minimum VMs required.
         System.out.println("Minimum VM's required: " + MinimumVMs.getMinimumRequiredVMs(Arrays.asList(new int[] {2, 5}, new int[] {3, 6}, new int[] {5, 7})));
+
+        // 22. Pass by reference test.
+        Person person = new Person("Nathan", "Zimmerly", 26);
+        PassByReference.ChangeName(person);
+        System.out.println(person.getLastName());
     }
 
     public static Integer getRandom() {
