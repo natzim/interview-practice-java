@@ -195,6 +195,9 @@ public class Main {
         Person person = new Person("Nathan", "Zimmerly", 26);
         PassByReference.ChangeName(person);
         System.out.println(person.getLastName());
+
+        // 23. Product of array except self.
+        System.out.println(Arrays.toString(ProductOfArray.productOfArrayExceptSelf(new int[] {5, 2, 3, 4})));
     }
 
     public static Integer getRandom() {
