@@ -197,7 +197,7 @@ public class Main {
         System.out.println(person.getLastName());
 
         // 23. Product of array except self.
-        System.out.println(Arrays.toString(ProductOfArray.productOfArrayExceptSelf(new int[] {5, 2, 3, 4})));
+        System.out.println(Arrays.toString(ProductOfArray.productOfArrayExceptSelf(new int[] {5, 2, 3, 4, 6})));
     }
 
     public static Integer getRandom() {
