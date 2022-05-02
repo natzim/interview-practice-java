@@ -7,10 +7,7 @@ import solutions.interview.Models.TreeNodeWithArray;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.*;
 
 import static java.util.Arrays.asList;
@@ -198,6 +195,18 @@ public class Main {
 
         // 23. Product of array except self.
         System.out.println(Arrays.toString(ProductOfArray.productOfArrayExceptSelf(new int[] {5, 2, 3, 4, 6})));
+
+        // 24. Camel case.
+        Scanner keyboardInput = new Scanner(System.in);
+
+        /*do {
+            System.out.print("Enter a command for camel case conversion (ex: S;M;plasticCup()): ");
+            System.out.println(CamelCase.convertCamelCase(keyboardInput.nextLine()));
+        } while (keyboardInput.hasNextLine());*/
+
+        // 25. Divisible sum pairs.
+        System.out.println(DivisibleSumPairs.divisibleCounterFast(6, 3, Arrays.asList(1, 3, 2, 6, 1, 2)));
+        System.out.println(DivisibleSumPairs.divisibleCounterFast(6, 5, Arrays.asList(1, 2, 3, 4, 5, 6)));
     }
 
     public static Integer getRandom() {
