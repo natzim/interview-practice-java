@@ -1,5 +1,6 @@
 package solutions.interview;
 
+import com.sun.source.tree.Tree;
 import solutions.interview.Models.Node;
 import solutions.interview.Models.Person;
 import solutions.interview.Models.TreeNode;
@@ -207,6 +208,34 @@ public class Main {
         // 25. Divisible sum pairs.
         System.out.println(DivisibleSumPairs.divisibleCounterFast(6, 3, Arrays.asList(1, 3, 2, 6, 1, 2)));
         System.out.println(DivisibleSumPairs.divisibleCounterFast(6, 5, Arrays.asList(1, 2, 3, 4, 5, 6)));
+
+        // 26. Invert binary tree.
+        TreeNode tree3 = new TreeNode(4);
+        tree3.left = new TreeNode(2);
+        tree3.right = new TreeNode(7);
+        tree3.left.left = new TreeNode(1);
+        tree3.left.right = new TreeNode(3);
+        tree3.right.left = new TreeNode(6);
+        tree3.right.right = new TreeNode(9);
+
+        InvertBinaryTree.invertBinaryTree(tree3);
+
+        // 27. Flatten binary tree.
+        TreeNode tree4 = new TreeNode(1);
+        tree4.left = new TreeNode(2);
+        tree4.right = new TreeNode(5);
+        tree4.left.left = new TreeNode(3);
+        tree4.left.right = new TreeNode(4);
+        tree4.right.right = new TreeNode(6);
+
+        FlattenBinaryTree.flatten(tree4, new TreeNode(0));
+        TreeNode flattened = FlattenBinaryTree.flattened;
+        ArrayList<Integer> flattenedArray = FlattenBinaryTree.flattenedArray;
+
+        System.out.println("Finished.");
+
+        // 28. Test taking.
+        Testing.main(null);
     }
 
     public static Integer getRandom() {
