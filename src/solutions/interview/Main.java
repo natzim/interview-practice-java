@@ -232,10 +232,10 @@ public class Main {
         TreeNode flattened = FlattenBinaryTree.flattened;
         ArrayList<Integer> flattenedArray = FlattenBinaryTree.flattenedArray;
 
-        System.out.println("Finished.");
-
         // 28. Test taking.
         Testing.main(null);
+
+        System.out.println("Finished.");
     }
 
     public static Integer getRandom() {
