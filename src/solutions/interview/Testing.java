@@ -1,15 +1,81 @@
 package solutions.interview;
 
+import java.math.BigInteger;
+import java.util.HashMap;
 import java.util.Hashtable;
 
 public class Testing {
     public static void main(String[] args) {
-        System.out.println(LetterCapitalize("i ran there"));
-        System.out.println(DashInsert("454793"));
-        System.out.println(DistinctList(new int[] {100,2,101,4}));
+        System.out.println(letterCapitalize("i ran there"));
+        System.out.println(dashInsert("454793"));
+        System.out.println(distinctList(new int[] {100,2,101,4}));
+        System.out.println(arrows("^vv<v"));
+        System.out.println(numbersMax(new int[] {3,8,2,3,3,2}));
+        System.out.println(binaryToZero("111"));
     }
 
-    public static String LetterCapitalize(String str) {
+    public static int binaryToZero(String S) {
+        try {
+            BigInteger number = new BigInteger(S, 2);
+
+            int operations = 0;
+
+            do {
+                // Check if it is odd number.
+                if (number.remainder(BigInteger.valueOf(2)).intValue() == 0) {
+                    number = number.divide(BigInteger.valueOf(2));
+                } else {
+                    number = number.subtract(BigInteger.valueOf(1));
+                }
+
+                operations++;
+            } while(number.intValue() > 0);
+
+            return operations;
+        } catch (NumberFormatException ex) {
+            return 0;
+        }
+    }
+
+    public static int numbersMax(int[] A) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        int biggestOccurrence = 0;
+
+        for (int number : A) {
+            map.merge(number, 1, Integer::sum);
+        }
+
+        for (int key : map.keySet()) {
+            int value = map.get(key);
+
+            if (value == key && value > biggestOccurrence) {
+                biggestOccurrence = value;
+            }
+        }
+
+        return biggestOccurrence;
+    }
+
+    public static int arrows(String arrows) {
+        HashMap<Character, Integer> map = new HashMap<>();
+        int maxArrow = 0;
+
+        char[] arrowArray = arrows.toCharArray();
+
+        for (char arrow : arrowArray) {
+            map.merge(arrow, 1, Integer::sum);
+            int arrowCounter = map.get(arrow);
+
+            if (arrowCounter > maxArrow) {
+                maxArrow = arrowCounter;
+            }
+        }
+
+        return arrows.length() - maxArrow;
+    }
+
+    public static String letterCapitalize(String str) {
         String[] words = str.split(" ");
 
         for (int index = 0; index < words.length; index++) {
@@ -20,7 +86,7 @@ public class Testing {
         return String.join(" ", words);
     }
 
-    public static String DashInsert(String str) {
+    public static String dashInsert(String str) {
         StringBuilder stringBuffer = new StringBuilder();
         char[] characters = str.toCharArray();
 
@@ -44,7 +110,7 @@ public class Testing {
         return stringBuffer.toString();
     }
 
-    public static int DistinctList(int[] arr) {
+    public static int distinctList(int[] arr) {
         Hashtable<Integer, Integer> numbers = new Hashtable<>();
 
         int duplicateCounter = 0;

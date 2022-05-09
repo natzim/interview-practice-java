@@ -232,10 +232,13 @@ public class Main {
         TreeNode flattened = FlattenBinaryTree.flattened;
         ArrayList<Integer> flattenedArray = FlattenBinaryTree.flattenedArray;
 
-        // 28. Test taking.
-        Testing.main(null);
-
         System.out.println("Finished.");
+
+        // 28. Pythagorean triplets.
+        System.out.println("Pythagorean triplets exists? " + PythagoreanTriplets.findPythagoreanTriplets(Arrays.asList(3, 5, 12, 5, 13)));
+
+        // Test taking.
+        Testing.main(null);
     }
 
     public static Integer getRandom() {
