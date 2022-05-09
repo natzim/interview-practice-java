@@ -234,7 +234,10 @@ public class Main {
 
         System.out.println("Finished.");
 
-        // 28. Test taking.
+        // 28. Pythagorean triplets.
+        System.out.println("Pythagorean triplets exists? " + PythagoreanTriplets.findPythagoreanTriplets(Arrays.asList(3, 5, 12, 5, 13)));
+
+        // Test taking.
         Testing.main(null);
     }
 
