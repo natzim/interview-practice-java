@@ -1,10 +1,7 @@
 package solutions.interview;
 
 import com.sun.source.tree.Tree;
-import solutions.interview.Models.Node;
-import solutions.interview.Models.Person;
-import solutions.interview.Models.TreeNode;
-import solutions.interview.Models.TreeNodeWithArray;
+import solutions.interview.Models.*;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -243,6 +240,15 @@ public class Main {
 
         // 31. Roman numeral converter.
         System.out.println("Roman numeral: " + RomanToNumber.translateRomanToNumber("MCMXCIV"));
+
+        // 32. Double linked list.
+        DoubleLinkedList doubleList = new DoubleLinkedList();
+        doubleList.insert(2);
+        doubleList.insert(4);
+        doubleList.insert(5);
+        doubleList.insert(7);
+
+        doubleList.remove(5);
 
         // Temp solutions.
         Temp.main(null);
