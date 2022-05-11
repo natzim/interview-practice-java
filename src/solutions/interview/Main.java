@@ -238,6 +238,12 @@ public class Main {
         // 29. Push dominoes.
         System.out.println("Push dominoes: " + PushDominoes.pushDominoes("..R...L..R.".toCharArray()));
 
+        // 30. Simple calculator.
+        System.out.println("Simple calculator: " + SimpleCalculator.calculate("2+2"));
+
+        // 31. Roman numeral converter.
+        System.out.println("Roman numeral: " + RomanToNumber.translateRomanToNumber("MCMXCIV"));
+
         // Temp solutions.
         Temp.main(null);
 
