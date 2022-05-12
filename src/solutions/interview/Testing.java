@@ -1,8 +1,10 @@
 package solutions.interview;
 
 import java.math.BigInteger;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Random;
 
 public class Testing {
     public static void main(String[] args) {
@@ -12,6 +14,20 @@ public class Testing {
         System.out.println(arrows("^vv<v"));
         System.out.println(numbersMax(new int[] {3,8,2,3,3,2}));
         System.out.println(binaryToZero("111"));
+        System.out.println(Arrays.toString(randomPlaylist(new String[] {"song1", "song2", "song3", "song4", "song5", "song6"})));
+    }
+
+    public static String[] randomPlaylist(String[] songs) {
+        for (int index = 0; index < songs.length; index++) {
+            Random random = new Random();
+            int randomSongIndex = random.nextInt(index, songs.length);
+
+            String temp = songs[randomSongIndex];
+            songs[randomSongIndex] = songs[index];
+            songs[index] = temp;
+        }
+
+        return songs;
     }
 
     public static int binaryToZero(String S) {

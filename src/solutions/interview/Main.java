@@ -254,7 +254,7 @@ public class Main {
         Temp.main(null);
 
         // Test taking.
-        // Testing.main(null);
+        Testing.main(null);
 
         System.out.println("Finished.");
     }
