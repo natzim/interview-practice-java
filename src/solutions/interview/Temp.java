@@ -12,6 +12,28 @@ public class Temp {
         System.out.println(lonelyInteger(Arrays.asList(1, 2, 3, 4, 3, 2, 1)));
         System.out.println("Is Palindrome: " + isPalindrome(11));
         System.out.println("Grades: " + gradingStudents(new ArrayList(Arrays.asList(73, 67, 38, 33))));
+        System.out.println("Longest Common Prefix: " + longestCommonPrefix(new String[] {"flower", "flow", "flight"}));
+    }
+
+    public static String longestCommonPrefix(String[] strings) {
+        StringBuilder prefix = new StringBuilder();
+
+        if (strings.length > 0) {
+            outer:
+            for (int firstIndex = 0; firstIndex < strings[0].length(); firstIndex++) {
+                char character = strings[0].charAt(firstIndex);
+
+                for (int index = 1; index < strings.length; index++) {
+                    if (firstIndex >= strings[index].length() || character != strings[index].charAt(firstIndex)) {
+                        break outer;
+                    }
+                }
+
+                prefix.append(character);
+            }
+        }
+
+        return prefix.toString();
     }
 
     public static List<Integer> sparseArrays(List<String> strings, List<String> queries) {
