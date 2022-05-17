@@ -250,11 +250,14 @@ public class Main {
 
         doubleList.remove(5);
 
+        // 33. Valid parentheses.
+        System.out.println("Is valid parentheses: " + ValidParentheses.isValid("{{}[][[[]]]}"));
+
         // Temp solutions.
-        Temp.main(null);
+        // Temp.main(null);
 
         // Test taking.
-        Testing.main(null);
+        // Testing.main(null);
 
         System.out.println("Finished.");
     }
