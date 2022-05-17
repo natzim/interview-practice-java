@@ -253,6 +253,9 @@ public class Main {
         // 33. Valid parentheses.
         System.out.println("Is valid parentheses: " + ValidParentheses.isValid("{{}[][[[]]]}"));
 
+        // 34. Tree from sorted integer array.
+        System.out.println("Tree from sorted number array: " + TreeFromSortedArray.arrayToTree(new int[] {-10, -3, 0, 5, 9}).toString());
+
         // Temp solutions.
         // Temp.main(null);
 
