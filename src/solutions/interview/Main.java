@@ -1,6 +1,5 @@
 package solutions.interview;
 
-import com.sun.source.tree.Tree;
 import solutions.interview.Models.*;
 
 import java.time.LocalTime;
@@ -55,10 +54,10 @@ public class Main {
         System.out.println("Can it spell 'Taco': " + note.CanSpell("Taco"));
 
         // 6. Add two numbers together using linked lists.
-        Node l1 = new Node(5, new Node(6, new Node(4, null)));
-        Node l2 = new Node(2, new Node(4, new Node(3, null)));
+        ListNode l1 = new ListNode(5, new ListNode(6, new ListNode(4, null)));
+        ListNode l2 = new ListNode(2, new ListNode(4, new ListNode(3, null)));
 
-        Node total = AddLinkedListNumbers.addTwoNumbersRecursively(l1, l2);
+        ListNode total = AddLinkedListNumbers.addTwoNumbersRecursively(l1, l2);
         System.out.println("Total for linked list numbers is: " + total);
 
         // 7. Two sum.
@@ -148,10 +147,10 @@ public class Main {
         System.out.println(MissingDuplicateNumber.findMissingDuplicateNumber(new int[] {4, 3, 2, 4, 1, 3, 2}));
 
         // 14. Reverse a linked list.
-        Node orderedListToReserve = new Node(1, new Node(2, new Node(3, null)));
+        ListNode orderedListToReserve = new ListNode(1, new ListNode(2, new ListNode(3, null)));
         System.out.println("Ordered List: " + ReverseLinkedList.printLinkedList(orderedListToReserve));
 
-        Node reversedList = ReverseLinkedList.reversedLinkedList(orderedListToReserve);
+        ListNode reversedList = ReverseLinkedList.reversedLinkedList(orderedListToReserve);
         System.out.println("Reversed List: " + ReverseLinkedList.printLinkedList2(reversedList));
 
         // 15. Implement stack with max number feature.
@@ -255,6 +254,10 @@ public class Main {
 
         // 34. Tree from sorted integer array.
         System.out.println("Tree from sorted number array: " + TreeFromSortedArray.arrayToTree(new int[] {-10, -3, 0, 5, 9}).toString());
+
+        // 35. Merge two linked lists together.
+        // ListNode merged = MergeTwoLists.mergeLists(new ListNode(1, new ListNode(2, new ListNode(4, null))), new ListNode(1, new ListNode(3, new ListNode(4, null))));
+        ListNode mergedTwo = MergeTwoLists.mergeLists(null, new ListNode(0, null));
 
         // Temp solutions.
         // Temp.main(null);

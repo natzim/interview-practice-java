@@ -1,12 +1,12 @@
 package solutions.interview;
 
-import solutions.interview.Models.Node;
+import solutions.interview.Models.ListNode;
 
 public class ReverseLinkedList {
-    public static Node reversedLinkedList(Node root) {
-        Node next = null;
-        Node current = root;
-        Node previous = null;
+    public static ListNode reversedLinkedList(ListNode root) {
+        ListNode next = null;
+        ListNode current = root;
+        ListNode previous = null;
 
         do {
             next = current.next;
@@ -19,7 +19,7 @@ public class ReverseLinkedList {
         return previous;
     }
 
-    public static String printLinkedList(Node root) {
+    public static String printLinkedList(ListNode root) {
         if (root == null) {
             return "";
         }
@@ -27,7 +27,7 @@ public class ReverseLinkedList {
         return root.value + printLinkedList(root.next);
     }
 
-    public static String printLinkedList2(Node root) {
+    public static String printLinkedList2(ListNode root) {
         String output = String.valueOf(root.value);
 
         if (root.next != null) {

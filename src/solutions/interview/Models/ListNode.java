@@ -1,10 +1,10 @@
 package solutions.interview.Models;
 
-public class Node {
+public class ListNode {
     public int value;
-    public Node next;
+    public ListNode next;
 
-    public Node (int data, Node nextNode) {
+    public ListNode(int data, ListNode nextNode) {
         this.value = data;
         this.next = nextNode;
     }
