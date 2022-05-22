@@ -259,6 +259,9 @@ public class Main {
         // ListNode merged = MergeTwoLists.mergeLists(new ListNode(1, new ListNode(2, new ListNode(4, null))), new ListNode(1, new ListNode(3, new ListNode(4, null))));
         ListNode mergedTwo = MergeTwoLists.mergeLists(null, new ListNode(0, null));
 
+        // 36. String inside another string.
+        System.out.println("String is inside: " + StringInsideString.strStr("aaaaa", "bba"));
+
         // Temp solutions.
         // Temp.main(null);
 
