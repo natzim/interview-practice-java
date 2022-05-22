@@ -262,6 +262,20 @@ public class Main {
         // 36. String inside another string.
         System.out.println("String is inside: " + StringInsideString.strStr("aaaaa", "bba"));
 
+        // 37. Plus one.
+        System.out.println("Plus one number is: " + Arrays.toString(PlusOne.plusOneFaster(new int[] {9, 8, 9})));
+
+        // 38. BFS traversal of 2D array.
+        int[][] grid = new int[][] {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12},
+                {13, 14, 15, 16},
+        };
+        System.out.println("BFS traversal of 2D array: " + MatrixTraversal.bfsTraversalIterative(grid));
+        System.out.println("DFS traversal of 2D array: " + MatrixTraversal.dfsTraversalIterative(grid));
+        System.out.println("DFS traversal recursive of 2D array: " + MatrixTraversal.dfsTraversalRecursive(grid));
+
         // Temp solutions.
         // Temp.main(null);
 
