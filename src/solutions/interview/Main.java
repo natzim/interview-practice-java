@@ -276,6 +276,12 @@ public class Main {
         System.out.println("DFS traversal of 2D array: " + MatrixTraversal.dfsTraversalIterative(grid));
         System.out.println("DFS traversal recursive of 2D array: " + MatrixTraversal.dfsTraversalRecursive(grid));
 
+        // 39. Tree path sum.
+        System.out.println("Tree has path sum inside for number: " + TreePathSum.hasPathSum(new TreeNode(1), 1));
+
+        // 40. Happy number.
+        System.out.println("Is it a happy number: " + HappyNumber.isHappy(2));
+
         // Temp solutions.
         // Temp.main(null);
 

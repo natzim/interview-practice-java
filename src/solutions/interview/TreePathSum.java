@@ -8,12 +8,13 @@ public class TreePathSum {
     }
 
     public static boolean getSum(TreeNode root, int targetSum, int sum) {
-        if (root.left == null && root.right == null && targetSum == sum) {
-            return true;
+        if (root == null) {
+            return false;
+        } else if (root.left == null && root.right == null) {
+            return targetSum == sum + root.data;
         }
 
         sum += root.data;
-
         return getSum(root.left, targetSum, sum) || getSum(root.right, targetSum, sum);
     }
 }
