@@ -282,6 +282,17 @@ public class Main {
         // 40. Happy number.
         System.out.println("Is it a happy number: " + HappyNumber.isHappy(2));
 
+        // 41. Remove linked list elements.
+        ListNode removeListNodes = new ListNode(1, new ListNode(2, new ListNode(3, null)));
+        ListNode removedListNodes = RemoveLinkedListElement.removeElement(removeListNodes, 2);
+
+        // 42. Sort linked list.
+        ListNode unsortedNodes = new ListNode(4, new ListNode(2, new ListNode(1, new ListNode(3, null))));
+        ListNode sortedNodes = SortLinkedList.sort(unsortedNodes);
+
+        // 43. Add binary strings together.
+        System.out.println("Tow binary numbers added together: " + AddBinary.sum("11", "1"));
+
         // Temp solutions.
         // Temp.main(null);
 
