@@ -38,7 +38,7 @@ public class TreeNode {
         return postOrder(root.left) + postOrder(root.right) + root.data;
     }
 
-    public static void breathSearchFirst(TreeNode root) {
+    public static void bfs(TreeNode root) {
         Queue<TreeNode> que = new LinkedList<>();
         que.add(root);
 

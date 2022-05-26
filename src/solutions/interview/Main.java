@@ -130,7 +130,7 @@ public class Main {
         System.out.println(TreeNode.postOrder(tree2));
 
         System.out.println("Breath first search: ");
-        TreeNode.breathSearchFirst(tree2);
+        TreeNode.bfs(tree2);
 
         // 12. Reconstruct queue based on height.
         int[][] queue = new int[][]{

@@ -7,8 +7,7 @@ import java.util.List;
 
 public class TreeFromSortedArray {
     public static TreeNode arrayToTree(int[] numbers) {
-        TreeNode tree = helper(0, numbers.length - 1, numbers);
-        return tree;
+        return helper(0, numbers.length - 1, numbers);
     }
 
     private static TreeNode helper(int left, int right, int[] numbers) {
