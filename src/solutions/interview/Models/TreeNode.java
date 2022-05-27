@@ -55,4 +55,63 @@ public class TreeNode {
             }
         }
     }
+
+    public static int sum(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int leftSum = sum(root.left);
+        int rightSum = sum(root.right);
+
+        return root.data + leftSum + rightSum;
+    }
+
+    public static int max(TreeNode root) {
+        if (root == null) {
+            return Integer.MIN_VALUE;
+        }
+
+        int leftMax = max(root.left);
+        int rightMax = max(root.right);
+
+        return Integer.max(root.data, Integer.max(leftMax, rightMax));
+    }
+
+    public static int height(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int leftHeight = height(root.left);
+        int rightHeight = height(root.right);
+
+        return 1 + Integer.max(leftHeight, rightHeight);
+    }
+
+    public static boolean exists(TreeNode root, int value) {
+        if (root == null) {
+            return false;
+        }
+
+        boolean existsLeft = exists(root.left, value);
+        boolean existsRight = exists(root.right, value);
+
+        return root.data == value || existsLeft || existsRight;
+    }
+
+    public static void reverse(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        reverse(root.left);
+        reverse(root.right);
+
+        TreeNode left = root.left;
+        TreeNode right = root.right;
+
+        root.left = right;
+        root.right = left;
+    }
 }
